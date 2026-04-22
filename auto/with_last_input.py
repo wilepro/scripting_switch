@@ -6,7 +6,7 @@ from datetime import datetime
 THRESHOLD_WEEKS = 24
 THRESHOLD_SECONDS = THRESHOLD_WEEKS * 7 * 24 * 3600
 
-DRY_RUN = False  # 🔒 True = simulation / False = applique
+DRY_RUN = True  # 🔒 True = simulation / False = applique
 
 def convert_to_seconds(time_str):
     # 🔧 nettoyage
