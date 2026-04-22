@@ -1,0 +1,14 @@
+from netmiko import ConnectHandler
+from rich import print
+
+my_device = {
+    "device_type": "cisco_ios",
+    "host": "192.168.1.143",
+    "username": "learner",
+    "password": "password1"
+}
+
+
+with ConnectHandler(**my_device) as connection:
+    ospf_result = connection.send_config_from_file(config_file="R3-ospf.cfg")
+    print(ospf_result)

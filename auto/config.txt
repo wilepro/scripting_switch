@@ -1,0 +1,10 @@
+hostname Router4
+ip domain-name lab.local
+username wilson privilege 15 secret cisco
+crypto key generate rsa 
+1024
+ip ssh version 2
+line vty 0 4
+transport input ssh
+login local
+exit
